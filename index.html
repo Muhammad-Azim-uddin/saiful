@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js practice  </title>
+    <link rel="stylesheet" href="./bootstrap file/bootstrap.min.css">
+    <script src="./js file/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- <input type="text" name="name" id="name" placeholder="your name.."> -->
+     <!-- <button type="submit" class="btn btn-secondary m-5 mb-0" id="submit">Click here...</button>
+     <br>
+     <div  class="result m-3  p-2 " id="result"></div> -->
+
+     <button type="submit" class="" id="button-1">CLICK Here..</button>
+     <h1 class="" id="output"></h1>
+
+
+        <!-- another part start -->
+        <!-- <button type="submit" id="guess-btn">Start guess..</button>
+        <div class="" id="guess"></div> -->
+
+
+
+
+    <!-- <script src="./hello.js"></s  -->
+    <script>
+        let submit =  document.getElementById("submit");
+
+        submit.addEventListener("click" , function(){
+            let num =  prompt("exam dicho? ans with yes or no.");
+            // num = Number(num);
+                // document.write("you got pass");
+                // prompt("enter yes or no");
+                let  result = document.getElementById("result");
+
+            if  (num == "yes"){
+                    let actualNum = prompt("Enter your number. (number must be in 14 -25 , else you will be fail) ");
+                    if(
+                        actualNum>14  && actualNum<25){
+                        //    result.innerHTML= "you got pass with" + " "+  actualNum + " " + "number";
+                        let roundFig = parseInt(actualNum)
+                        alert("your are passed by" + " " +  roundFig + " " + "number");
+
+                        }
+                    else {
+                            // result.innerHTML= "you are fail.";
+                            alert("you are fail");
+                        }
+                }
+            else {
+                // result.innerHTML= "you don't attend the  exam, so you are fail.";
+                alert("you are failed, cause you don't attend the examination.")
+                }
+        })
+
+            // else if(
+            //     num>20  && num<25){
+            //         document.write("you got A+");
+            //     }
+            // else if(
+            //     num>25){
+            //         document.write("Invalid number");
+            //     }
+        
+        let btn = document.getElementById("button-1");
+        btn.addEventListener("click", function(){
+            let myoutput =  document.getElementById("output");
+            let roll = prompt("enter your roll number = ");
+            if (roll >0 && roll  < 10){
+
+                myoutput.innerHTML = "you are a good student. "
+            }
+            else{
+                myoutput.innerHTML = "you are not a good student."
+            }
+        })
+
+        // another part start here
+        // let submit_btn = document.getElementById("guess-btn");
+        // submit_btn.addEventListener("click", function(){
+        //     let guess_div = document.getElementById("guess");
+        //     let guess_num = prompt("enter your guess number");
+        //     guess_num = parseInt(guess_num);
+        //     if (guess_num == 5){
+        //         guess_div.innerHTML =  "you are correct";
+
+        //     }
+        //     else{
+        //         guess_div.innerHTML =  "you are wrong";
+
+        //     }
+        // })
+
+        // console.log("hello world. how are you?");
+    </script>
+</body>
+</html>
